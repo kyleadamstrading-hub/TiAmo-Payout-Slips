@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TiAmo Massage - Payout System</title>
 
@@ -28,13 +28,15 @@
       display:none;
     }
 
+    /* LANDING */
+
     .landing{
       min-height:100vh;
       display:flex;
       justify-content:center;
       align-items:center;
       flex-direction:column;
-      gap:25px;
+      gap:20px;
       background:
       linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
       url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop') center/cover;
@@ -42,15 +44,12 @@
 
     .landing h1{
       font-size:52px;
-      letter-spacing:2px;
-      font-weight:700;
       color:#d4af37;
+      letter-spacing:2px;
     }
 
     .landing p{
       color:#ccc;
-      margin-top:-10px;
-      margin-bottom:20px;
     }
 
     .main-btn{
@@ -61,19 +60,21 @@
       font-size:18px;
       font-weight:600;
       cursor:pointer;
-      transition:0.3s;
       background:#d4af37;
       color:#000;
+      transition:0.3s;
     }
 
     .main-btn:hover{
-      transform:translateY(-2px);
       background:#f1cb52;
+      transform:translateY(-2px);
     }
+
+    /* HEADER */
 
     .topbar{
       width:100%;
-      padding:20px;
+      padding:18px;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -81,11 +82,12 @@
       border-bottom:1px solid rgba(255,255,255,0.08);
       position:sticky;
       top:0;
-      z-index:10;
+      z-index:100;
     }
 
     .topbar h2{
       color:#d4af37;
+      font-size:22px;
     }
 
     .small-btn{
@@ -99,49 +101,62 @@
     }
 
     .container{
-      max-width:1400px;
+      max-width:1200px;
       margin:auto;
-      padding:30px;
+      padding:20px;
     }
 
     .actions{
       display:flex;
-      gap:15px;
-      margin-bottom:30px;
+      gap:12px;
+      margin-bottom:20px;
       flex-wrap:wrap;
     }
+
+    /* PAYSLIP */
 
     .payslip{
       background:#fff;
       color:#000;
-      border-radius:20px;
-      padding:35px;
-      margin-bottom:35px;
+      border-radius:16px;
+      padding:22px;
+      margin-bottom:25px;
       box-shadow:0 10px 35px rgba(0,0,0,0.4);
-      position:relative;
+      width:1123px;
+      max-width:100%;
+      margin-left:auto;
+      margin-right:auto;
     }
 
     .company-title{
       text-align:center;
-      margin-bottom:25px;
+      margin-bottom:18px;
     }
 
     .company-title h1{
-      color:#000;
-      font-size:36px;
+      font-size:28px;
+      color:#111;
       letter-spacing:2px;
     }
 
     .company-title p{
       color:#666;
-      margin-top:5px;
+      font-size:13px;
+    }
+
+    .section-title{
+      margin:18px 0 10px;
+      font-size:16px;
+      border-left:4px solid #d4af37;
+      padding-left:10px;
+      color:#111;
     }
 
     .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:18px;
-      margin-bottom:20px;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;
+      margin-bottom:12px;
     }
 
     .field{
@@ -150,128 +165,160 @@
     }
 
     .field label{
-      margin-bottom:8px;
-      font-size:14px;
+      font-size:12px;
       font-weight:600;
+      margin-bottom:5px;
       color:#444;
     }
 
     .field input,
     .field textarea{
-      padding:14px;
-      border-radius:10px;
+      padding:10px;
+      border-radius:8px;
       border:1px solid #ccc;
       font-family:'Poppins',sans-serif;
-      font-size:14px;
+      font-size:12px;
     }
 
     .field textarea{
-      min-height:90px;
+      min-height:70px;
       resize:vertical;
     }
 
-    .section-title{
-      margin:25px 0 15px;
-      font-size:20px;
-      color:#111;
-      border-left:4px solid #d4af37;
-      padding-left:12px;
-    }
+    /* WEEKLY */
 
     .earnings-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:18px;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
     }
 
     .day-box{
       border:1px solid #ddd;
-      padding:15px;
-      border-radius:14px;
+      border-radius:12px;
+      padding:10px;
       background:#fafafa;
     }
 
     .day-box h4{
-      margin-bottom:10px;
+      font-size:13px;
+      margin-bottom:8px;
+      color:#111;
     }
+
+    /* PENALTIES */
 
     .penalty-item{
       border:1px solid #ddd;
-      padding:20px;
-      border-radius:14px;
+      border-radius:12px;
+      padding:12px;
+      margin-bottom:10px;
       background:#fafafa;
-      margin-bottom:15px;
     }
 
+    /* TOTALS */
+
     .totals{
-      margin-top:25px;
+      margin-top:18px;
       background:#111;
       color:#fff;
-      border-radius:18px;
-      padding:25px;
+      border-radius:14px;
+      padding:18px;
     }
 
     .totals-row{
       display:flex;
       justify-content:space-between;
-      padding:10px 0;
+      padding:8px 0;
       border-bottom:1px solid rgba(255,255,255,0.08);
-      font-size:16px;
+      font-size:14px;
     }
 
     .totals-row:last-child{
       border-bottom:none;
-      font-size:22px;
+      font-size:20px;
       font-weight:700;
       color:#d4af37;
     }
 
+    /* DOWNLOAD */
+
     .download-btn{
-      margin-top:25px;
       width:100%;
-      padding:16px;
+      margin-top:18px;
+      padding:14px;
       border:none;
-      border-radius:12px;
+      border-radius:10px;
       background:#d4af37;
       color:#000;
-      font-size:16px;
+      font-size:15px;
       font-weight:700;
       cursor:pointer;
     }
 
+    /* HISTORY */
+
     .history-card{
       background:#fff;
       color:#000;
-      padding:25px;
-      border-radius:16px;
-      margin-bottom:20px;
+      padding:20px;
+      border-radius:14px;
+      margin-bottom:18px;
     }
 
     .history-card h3{
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
 
-    @media(max-width:768px){
+    /* PRINT */
 
-      .landing h1{
-        font-size:38px;
-        text-align:center;
+    @media print{
+
+      body{
+        background:#fff;
       }
 
-      .container{
-        padding:18px;
+      .download-btn,
+      .small-btn,
+      .topbar,
+      .actions{
+        display:none !important;
       }
 
       .payslip{
-        padding:20px;
+        width:100%;
+        box-shadow:none;
+        border-radius:0;
+        margin:0;
+        padding:12mm;
+        page-break-inside:avoid;
+      }
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .earnings-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .landing h1{
+        font-size:38px;
+      }
+
+      .container{
+        padding:15px;
       }
     }
 
   </style>
 </head>
+
 <body>
 
-  <!-- LANDING PAGE -->
+  <!-- LANDING -->
+
   <section class="landing" id="landingPage">
 
     <h1>TiAmo Massage</h1>
@@ -289,6 +336,7 @@
   </section>
 
   <!-- PAYOUT PAGE -->
+
   <section class="hidden" id="payoutPage">
 
     <div class="topbar">
@@ -303,6 +351,7 @@
 
     <div class="container">
 
+      <!-- TOP BUTTON -->
       <div class="actions">
 
         <button class="small-btn" onclick="addPayslip()">
@@ -313,11 +362,21 @@
 
       <div id="payslipContainer"></div>
 
+      <!-- BOTTOM BUTTON -->
+      <div class="actions" style="justify-content:center; margin-top:30px;">
+
+        <button class="small-btn" onclick="addPayslip()">
+          + Add Another Payslip
+        </button>
+
+      </div>
+
     </div>
 
   </section>
 
-  <!-- HISTORY PAGE -->
+  <!-- HISTORY -->
+
   <section class="hidden" id="historyPage">
 
     <div class="topbar">
@@ -338,525 +397,488 @@
 
   </section>
 
-  <script>
+<script>
 
-    const payouts =
-      JSON.parse(localStorage.getItem("tiamo_payouts")) || [];
+const payouts =
+JSON.parse(localStorage.getItem("tiamo_payouts")) || [];
 
-    function goHome(){
+function goHome(){
 
-      document.getElementById('landingPage')
-      .classList.remove('hidden');
+  landingPage.classList.remove('hidden');
+  payoutPage.classList.add('hidden');
+  historyPage.classList.add('hidden');
+}
 
-      document.getElementById('payoutPage')
-      .classList.add('hidden');
+function openPayouts(){
 
-      document.getElementById('historyPage')
-      .classList.add('hidden');
-    }
+  landingPage.classList.add('hidden');
+  payoutPage.classList.remove('hidden');
+  historyPage.classList.add('hidden');
 
-    function openPayouts(){
+  if(
+    document.getElementById('payslipContainer')
+    .children.length === 0
+  ){
+    addPayslip();
+  }
+}
 
-      document.getElementById('landingPage')
-      .classList.add('hidden');
+function openHistory(){
 
-      document.getElementById('payoutPage')
-      .classList.remove('hidden');
+  landingPage.classList.add('hidden');
+  payoutPage.classList.add('hidden');
+  historyPage.classList.remove('hidden');
 
-      document.getElementById('historyPage')
-      .classList.add('hidden');
+  loadHistory();
+}
 
-      if(
-        document.getElementById('payslipContainer')
-        .children.length === 0
-      ){
-        addPayslip();
-      }
-    }
+function formatCurrency(value){
 
-    function openHistory(){
+  return "R " + Number(value || 0).toFixed(2);
+}
 
-      document.getElementById('landingPage')
-      .classList.add('hidden');
+function createDayField(day){
 
-      document.getElementById('payoutPage')
-      .classList.add('hidden');
+  return `
+  <div class="day-box">
 
-      document.getElementById('historyPage')
-      .classList.remove('hidden');
+    <h4>${day}</h4>
 
-      loadHistory();
-    }
+    <div class="field">
+      <label>Date</label>
+      <input type="date">
+    </div>
 
-    function formatCurrency(value){
+    <div class="field">
+      <label>Amount Earned</label>
+      <input
+      type="number"
+      class="earning-input"
+      value="0">
+    </div>
 
-      return "R " + Number(value || 0).toFixed(2);
-    }
+  </div>
+  `;
+}
 
-    function createDayField(day){
+function attachCalculationListeners(slip){
 
-      return `
-        <div class="day-box">
+  const inputs =
+  slip.querySelectorAll(
+    '.earning-input, .deduction-input'
+  );
 
-          <h4>${day}</h4>
+  inputs.forEach(input => {
 
-          <div class="field">
-            <label>Date</label>
-            <input type="date">
-          </div>
-
-          <div class="field">
-            <label>Amount Earned (ZAR)</label>
-            <input
-              type="number"
-              class="earning-input"
-              value="0"
-            >
-          </div>
-
-        </div>
-      `;
-    }
-
-    function attachCalculationListeners(slip){
-
-      const inputs = slip.querySelectorAll(
-        '.earning-input, .deduction-input'
-      );
-
-      inputs.forEach(input => {
-
-        input.removeEventListener(
-          'input',
-          input.listener
-        );
-
-        input.listener = () => calculateTotals(slip);
-
-        input.addEventListener(
-          'input',
-          input.listener
-        );
-      });
-    }
-
-    function calculateTotals(slip){
-
-      let earnings = 0;
-
-      slip.querySelectorAll('.earning-input')
-      .forEach(input => {
-
-        earnings += Number(input.value || 0);
-      });
-
-      const ads =
-        Number(
-          slip.querySelector('.ads').value || 0
-        );
-
-      const levy =
-        Number(
-          slip.querySelector('.levy').value || 0
-        );
-
-      let penaltyTotal = 0;
-
-      slip.querySelectorAll('.penalty')
-      .forEach(input => {
-
-        penaltyTotal += Number(input.value || 0);
-      });
-
-      const grandTotal =
-        earnings - ads - levy - penaltyTotal;
-
-      slip.querySelector('.before-total')
-      .innerText = formatCurrency(earnings);
-
-      slip.querySelector('.grand-total')
-      .innerText = formatCurrency(grandTotal);
-    }
-
-    function addPayslip(){
-
-      const id = Date.now();
-
-      const slip = document.createElement('div');
-
-      slip.className = 'payslip';
-
-      slip.id = `payslip-${id}`;
-
-      slip.innerHTML = `
-
-        <div class="company-title">
-
-          <h1>TiAmo Massage</h1>
-
-          <p>Therapist Payout Slip</p>
-
-        </div>
-
-        <div class="grid">
-
-          <div class="field">
-
-            <label>Current Date</label>
-
-            <input
-              type="date"
-              class="current-date"
-            >
-
-          </div>
-
-          <div class="field">
-
-            <label>Therapist Name</label>
-
-            <input
-              type="text"
-              class="therapist-name"
-              placeholder="Enter therapist name"
-            >
-
-          </div>
-
-        </div>
-
-        <h3 class="section-title">
-          Weekly Earnings
-        </h3>
-
-        <div class="earnings-grid">
-
-          ${createDayField('Monday')}
-          ${createDayField('Tuesday')}
-          ${createDayField('Wednesday')}
-          ${createDayField('Thursday')}
-          ${createDayField('Friday')}
-          ${createDayField('Saturday')}
-          ${createDayField('Sunday')}
-
-        </div>
-
-        <h3 class="section-title">
-          Deductions
-        </h3>
-
-        <div class="grid">
-
-          <div class="field">
-
-            <label>Ads Amount (ZAR)</label>
-
-            <input
-              type="number"
-              class="ads deduction-input"
-              value="0"
-            >
-
-          </div>
-
-          <div class="field">
-
-            <label>Levy Amount (ZAR)</label>
-
-            <input
-              type="number"
-              class="levy deduction-input"
-              value="0"
-            >
-
-          </div>
-
-        </div>
-
-        <!-- MULTIPLE PENALTIES -->
-        <div class="penalties-wrapper">
-
-          <div class="penalty-item">
-
-            <h4 style="margin-bottom:15px;">
-              Penalty Entry
-            </h4>
-
-            <div class="grid">
-
-              <div class="field">
-
-                <label>Penalty Date</label>
-
-                <input
-                  type="date"
-                  class="penalty-date"
-                >
-
-              </div>
-
-              <div class="field">
-
-                <label>Penalty Reason</label>
-
-                <input
-                  type="text"
-                  class="penalty-reason"
-                  placeholder="Reason for penalty"
-                >
-
-              </div>
-
-              <div class="field">
-
-                <label>Penalty Amount (ZAR)</label>
-
-                <input
-                  type="number"
-                  class="penalty deduction-input"
-                  value="0"
-                >
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button
-          type="button"
-          class="small-btn add-penalty-btn"
-          style="margin-top:15px;"
-        >
-          + Add Another Penalty
-        </button>
-
-        <div class="totals">
-
-          <div class="totals-row">
-
-            <span>Total Before Deductions</span>
-
-            <span class="before-total">
-              R 0.00
-            </span>
-
-          </div>
-
-          <div class="totals-row">
-
-            <span>Grand Total</span>
-
-            <span class="grand-total">
-              R 0.00
-            </span>
-
-          </div>
-
-        </div>
-
-        <h3 class="section-title">
-          Notes
-        </h3>
-
-        <div class="field">
-
-          <textarea
-            class="notes"
-            placeholder="Add notes for overpayments, underpayments, comments etc..."
-          ></textarea>
-
-        </div>
-
-        <button class="download-btn">
-          Download Payslip PNG
-        </button>
-      `;
-
-      document.getElementById('payslipContainer')
-      .appendChild(slip);
-
-      slip.querySelector('.current-date')
-      .valueAsDate = new Date();
-
-      attachCalculationListeners(slip);
+    input.addEventListener('input', () => {
 
       calculateTotals(slip);
 
-      // ADD PENALTY BUTTON
-      slip.querySelector('.add-penalty-btn')
-      .addEventListener('click', () => {
+    });
+  });
+}
 
-        const wrapper =
-          slip.querySelector('.penalties-wrapper');
+function calculateTotals(slip){
 
-        const penaltyDiv =
-          document.createElement('div');
+  let earnings = 0;
 
-        penaltyDiv.className = 'penalty-item';
+  slip.querySelectorAll('.earning-input')
+  .forEach(input => {
 
-        penaltyDiv.innerHTML = `
+    earnings += Number(input.value || 0);
 
-          <div class="grid">
+  });
 
-            <div class="field">
+  const ads =
+  Number(slip.querySelector('.ads').value || 0);
 
-              <label>Penalty Date</label>
+  const levy =
+  Number(slip.querySelector('.levy').value || 0);
 
-              <input
-                type="date"
-                class="penalty-date"
-              >
+  let penalties = 0;
 
-            </div>
+  slip.querySelectorAll('.penalty')
+  .forEach(input => {
 
-            <div class="field">
+    penalties += Number(input.value || 0);
 
-              <label>Penalty Reason</label>
+  });
 
-              <input
-                type="text"
-                class="penalty-reason"
-                placeholder="Reason for penalty"
-              >
+  const grandTotal =
+  earnings - ads - levy - penalties;
 
-            </div>
+  slip.querySelector('.before-total')
+  .innerText = formatCurrency(earnings);
 
-            <div class="field">
+  slip.querySelector('.grand-total')
+  .innerText = formatCurrency(grandTotal);
+}
 
-              <label>Penalty Amount (ZAR)</label>
+function addPayslip(){
 
-              <input
-                type="number"
-                class="penalty deduction-input"
-                value="0"
-              >
+  const id = Date.now();
 
-            </div>
+  const slip = document.createElement('div');
 
-          </div>
-        `;
+  slip.className = 'payslip';
 
-        wrapper.appendChild(penaltyDiv);
+  slip.id = `payslip-${id}`;
 
-        attachCalculationListeners(slip);
-      });
+  slip.innerHTML = `
 
-      // DOWNLOAD
-      slip.querySelector('.download-btn')
-      .addEventListener('click', () => {
+  <div class="company-title">
 
-        downloadPayslip(slip);
-      });
-    }
+    <h1>TiAmo Massage</h1>
 
-    async function downloadPayslip(slip){
+    <p>Therapist Payout Slip</p>
 
-      saveToHistory(slip);
+  </div>
 
-      const therapist =
-        slip.querySelector('.therapist-name').value
-        || "Therapist";
+  <div class="grid">
 
-      const canvas = await html2canvas(slip, {
+    <div class="field">
 
-        scale:2,
-        useCORS:true
+      <label>Current Date</label>
 
-      });
+      <input
+      type="date"
+      class="current-date">
 
-      const link =
-        document.createElement('a');
+    </div>
 
-      link.download =
-        `${therapist}-Payslip.png`;
+    <div class="field">
 
-      link.href = canvas.toDataURL();
+      <label>Therapist Name</label>
 
-      link.click();
-    }
+      <input
+      type="text"
+      class="therapist-name"
+      placeholder="Enter therapist name">
 
-    function saveToHistory(slip){
+    </div>
 
-      const payout = {
+  </div>
 
-        therapist:
-          slip.querySelector('.therapist-name')
-          .value,
+  <h3 class="section-title">
+    Weekly Earnings
+  </h3>
 
-        date:
-          slip.querySelector('.current-date')
-          .value,
+  <div class="earnings-grid">
 
-        total:
-          slip.querySelector('.grand-total')
-          .innerText
-      };
+    ${createDayField('Monday')}
+    ${createDayField('Tuesday')}
+    ${createDayField('Wednesday')}
+    ${createDayField('Thursday')}
+    ${createDayField('Friday')}
+    ${createDayField('Saturday')}
+    ${createDayField('Sunday')}
 
-      payouts.push(payout);
+  </div>
 
-      localStorage.setItem(
-        "tiamo_payouts",
-        JSON.stringify(payouts)
-      );
-    }
+  <h3 class="section-title">
+    Deductions
+  </h3>
 
-    function loadHistory(){
+  <div class="grid">
 
-      const historyContainer =
-        document.getElementById(
-          'historyContainer'
-        );
+    <div class="field">
 
-      historyContainer.innerHTML = '';
+      <label>Ads Amount (ZAR)</label>
 
-      if(payouts.length === 0){
+      <input
+      type="number"
+      class="ads deduction-input"
+      value="0">
 
-        historyContainer.innerHTML = `
+    </div>
 
-          <div class="history-card">
+    <div class="field">
 
-            <h3>No Previous Payouts</h3>
+      <label>Levy Amount (ZAR)</label>
 
-            <p>
-              No payout history available yet.
-            </p>
+      <input
+      type="number"
+      class="levy deduction-input"
+      value="0">
 
-          </div>
-        `;
+    </div>
 
-        return;
-      }
+  </div>
 
-      payouts.slice().reverse().forEach(item => {
+  <div class="penalties-wrapper">
 
-        const card =
-          document.createElement('div');
+    <div class="penalty-item">
 
-        card.className = 'history-card';
+      <div class="grid">
 
-        card.innerHTML = `
+        <div class="field">
 
-          <h3>${item.therapist}</h3>
+          <label>Penalty Date</label>
 
-          <p>
-            <strong>Date:</strong>
-            ${item.date}
-          </p>
+          <input
+          type="date"
+          class="penalty-date">
 
-          <p>
-            <strong>Grand Total:</strong>
-            ${item.total}
-          </p>
-        `;
+        </div>
 
-        historyContainer.appendChild(card);
-      });
-    }
+        <div class="field">
 
-  </script>
+          <label>Penalty Reason</label>
+
+          <input
+          type="text"
+          class="penalty-reason"
+          placeholder="Reason">
+
+        </div>
+
+        <div class="field">
+
+          <label>Penalty Amount</label>
+
+          <input
+          type="number"
+          class="penalty deduction-input"
+          value="0">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <button
+  type="button"
+  class="small-btn add-penalty-btn"
+  style="margin-top:10px;">
+
+  + Add Another Penalty
+
+  </button>
+
+  <div class="totals">
+
+    <div class="totals-row">
+
+      <span>Total Before Deductions</span>
+
+      <span class="before-total">
+        R 0.00
+      </span>
+
+    </div>
+
+    <div class="totals-row">
+
+      <span>Grand Total</span>
+
+      <span class="grand-total">
+        R 0.00
+      </span>
+
+    </div>
+
+  </div>
+
+  <h3 class="section-title">
+    Notes
+  </h3>
+
+  <div class="field">
+
+    <textarea
+    class="notes"
+    placeholder="Add notes here..."></textarea>
+
+  </div>
+
+  <button class="download-btn">
+
+    Download Payslip PNG
+
+  </button>
+  `;
+
+  document.getElementById('payslipContainer')
+  .appendChild(slip);
+
+  slip.querySelector('.current-date')
+  .valueAsDate = new Date();
+
+  attachCalculationListeners(slip);
+
+  calculateTotals(slip);
+
+  // ADD PENALTY
+
+  slip.querySelector('.add-penalty-btn')
+  .addEventListener('click', () => {
+
+    const wrapper =
+    slip.querySelector('.penalties-wrapper');
+
+    const div =
+    document.createElement('div');
+
+    div.className = 'penalty-item';
+
+    div.innerHTML = `
+
+    <div class="grid">
+
+      <div class="field">
+
+        <label>Penalty Date</label>
+
+        <input
+        type="date"
+        class="penalty-date">
+
+      </div>
+
+      <div class="field">
+
+        <label>Penalty Reason</label>
+
+        <input
+        type="text"
+        class="penalty-reason"
+        placeholder="Reason">
+
+      </div>
+
+      <div class="field">
+
+        <label>Penalty Amount</label>
+
+        <input
+        type="number"
+        class="penalty deduction-input"
+        value="0">
+
+      </div>
+
+    </div>
+    `;
+
+    wrapper.appendChild(div);
+
+    attachCalculationListeners(slip);
+
+  });
+
+  // DOWNLOAD
+
+  slip.querySelector('.download-btn')
+  .addEventListener('click', () => {
+
+    downloadPayslip(slip);
+
+  });
+}
+
+async function downloadPayslip(slip){
+
+  saveToHistory(slip);
+
+  const therapist =
+  slip.querySelector('.therapist-name').value
+  || "Therapist";
+
+  const canvas = await html2canvas(slip,{
+
+    scale:1.5,
+    useCORS:true,
+    backgroundColor:"#ffffff"
+
+  });
+
+  const link =
+  document.createElement('a');
+
+  link.download =
+  `${therapist}-Payslip.png`;
+
+  link.href = canvas.toDataURL("image/png");
+
+  link.click();
+}
+
+function saveToHistory(slip){
+
+  const payout = {
+
+    therapist:
+    slip.querySelector('.therapist-name').value,
+
+    date:
+    slip.querySelector('.current-date').value,
+
+    total:
+    slip.querySelector('.grand-total').innerText
+  };
+
+  payouts.push(payout);
+
+  localStorage.setItem(
+    "tiamo_payouts",
+    JSON.stringify(payouts)
+  );
+}
+
+function loadHistory(){
+
+  const historyContainer =
+  document.getElementById('historyContainer');
+
+  historyContainer.innerHTML = '';
+
+  if(payouts.length === 0){
+
+    historyContainer.innerHTML = `
+
+    <div class="history-card">
+
+      <h3>No Previous Payouts</h3>
+
+      <p>No payout history available yet.</p>
+
+    </div>
+    `;
+
+    return;
+  }
+
+  payouts.slice().reverse().forEach(item => {
+
+    const card =
+    document.createElement('div');
+
+    card.className = 'history-card';
+
+    card.innerHTML = `
+
+    <h3>${item.therapist}</h3>
+
+    <p>
+    <strong>Date:</strong>
+    ${item.date}
+    </p>
+
+    <p>
+    <strong>Grand Total:</strong>
+    ${item.total}
+    </p>
+    `;
+
+    historyContainer.appendChild(card);
+
+  });
+}
+
+</script>
 
 </body>
 </html>
